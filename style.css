@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Custom color variables: define reusable colors for the whole page. */
+    --dark: #0b1220;
+    --panel: #111c30;
+    --accent: #2563eb;
+    --text: #ffffff;
+    --muted: #cbd5e1;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1, 6;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 8%;
+    background: var(--panel);
+}
+
+
+
+
+
+.logo {
+    color: var(--text);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: blue;
+
+
+}
+
+.hero {
+    min-height: 70vh;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px;
+}
+
+.hero h1 {
+    max-width: 650px;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+
+}
+
+.hero p {
+    color: var(--muted)
+}
+
+.hero img {
+    width: min(280px, 35%);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.section h2 {
+    color: var(--text);
+    font-size: 1rem
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+
+}
+
+.skills-list li {
+    background: var(--muted);
+    padding: 18px;
+    border-radius: 20px;
+    background-color: white;
+    color: blue;
+    box-shadow: 0px 0px 8px;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+.button {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 12px 20px;
+
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.site-footer {
+    padding: 25px 8%;
+    align-items: center;
+    color: var(--muted);
+    background: var(--panel);
+}
+
+@media (max-width: 700px) {
+
+    .site-header,
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .hero img {
+        width: 200px;
+        /
+    }
+
+    nav {
+        gap: 12px;
+
+    }
+}
